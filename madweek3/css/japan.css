@@ -3,6 +3,7 @@
     src: url("../src/font/handwrite.ttf") format("truetype"); /* 글꼴 파일의 경로와 포맷 지정 */
 }
 body {
+    cursor: url('../src/images/jap_cursor.png'),auto;
     margin: 0;
     font-family: "MyFont", Arial, sans-serif;
     background-color: #f5f5dc;

@@ -30,7 +30,7 @@ class App {
             "../korean.html",
             "../english.html",
             "China",
-            "Japan",
+            "../japan.html",
             "Saudi",
             "../english.html",
             "Brazil",
