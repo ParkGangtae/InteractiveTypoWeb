@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "MyFont"; /* 사용할 글꼴 이름 지정 */
+    src: url("font/GenEiKoburiMin6-R.ttf") format("truetype"); /* 글꼴 파일의 경로와 포맷 지정 */
+}
+body {
+    margin: 0;
+    font-family: "MyFont", Arial, sans-serif;
+    background-color: #f5f5dc;
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.5) 1px,
+            transparent 1px
+        ),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 10px 10px;
+    overflow-x: hidden;
+    width: 100%;
+    height: 1000px;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 210vh;
+    font-size: 100px;
+    color: #000000;
+    user-select: none;
+}
+
+.letter {
+    opacity: 0;
+    writing-mode: vertical-rl;
+    user-select: none;
+}
+
+.hiddenContent {
+    position: relative;
+    z-index: 1;
+    visibility: hidden;
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-size: 25px;
+    top: 0; /* Y 좌표 */
+    left: 0; /* X 좌표 */
+    height: 500%;
+    width: 100%; /* 너비 조절 */
+    /* background: white; */
+    color: #999999;
+    user-select: none;
+}
+
+.lines {
+    opacity: 0;
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-size: 20px;
+    height: 3000px; /* 높이 조절 */
+    width: 100px; /* 너비 조절 */
+    user-select: none;
+}
+
+.vertical-text1 {
+    top: 700px; /* Y 좌표 */
+    left: 20%; /* X 좌표 */
+}
+.vertical-text2 {
+    top: 800px;
+    left: 70%;
+}
+.vertical-text3 {
+    top: 900px;
+    left: 40%;
+}
+.vertical-text4 {
+    top: 1000px;
+    left: 60%;
+}
+.vertical-text5 {
+    top: 1100px;
+    left: 30%;
+}
+.vertical-text6 {
+    top: 1200px;
+    left: 55%;
+}
+.vertical-text7 {
+    opacity: 0;
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    height: 1000px; /* 높이 조절 */
+    width: 100px; /* 너비 조절 */
+    user-select: none;
+    top: 1430px;
+    left: 45%;
+}
+.vertical-text8 {
+    opacity: 0;
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-size: 30px;
+    height: 1000px; /* 높이 조절 */
+    width: 100px; /* 너비 조절 */
+    user-select: none;
+    top: 1430px;
+    left: 47%;
+}
+
+.click-effect {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: animateEffect 0.6s ease-out forwards;
+    pointer-events: none; /* 클릭 이벤트 방지 */
+}
+
+@keyframes animateEffect {
+    to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
