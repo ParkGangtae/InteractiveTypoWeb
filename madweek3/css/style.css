@@ -1,6 +1,5 @@
-html,
-body {
-    /* height: 100%; */
+html{
+    cursor: url('../src/images/eng_cursor.png'),auto;
 }
 body {
     cursor: url('../src/images/eng_cursor.png'),auto;
@@ -38,7 +37,6 @@ body {
 
 i {
     font-family: "ic-font" !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -49,6 +47,8 @@ i {
 }
 
 p {
+    cursor: url('../src/images/eng_cursor.png'),auto;
+
     margin: 0 0 3rem;
 }
 .search {
@@ -117,8 +117,6 @@ p {
 }
 .icon-button img {
     width: 100%;
-}
-.close {
 }
 
 #waveform {
