@@ -32,7 +32,7 @@ class App {
             "China",
             "Japan",
             "Saudi",
-            "Austrailia",
+            "../english.html",
             "Brazil",
             "EUROPE",
         ];
@@ -41,6 +41,7 @@ class App {
         this._setupLight();
         this._setupModel_sphere();
         this._setupStars_sphere();
+        this._setupmini_sphere();
         this._setupBackground_particles();
         this._setupControls();
         this._setupText();
@@ -64,10 +65,11 @@ class App {
                 onComplete: () => {
                     gsap.to(this._camera.position, {
                         duration: 0.85,
-                        x: -2.715,
-                        y: 2.715,
-                        z: -2.715,
-                        onComplete: () => {
+                        x: 1,
+                        y: 0,
+                        z: 0,
+                        onUpdate: () => {
+                            this._camera.lookAt(0, 0, 0);
                             gsap.to(this._scene.background, {
                                 duration: 1,
                                 r: 0xec / 255,
@@ -148,6 +150,17 @@ class App {
         this._earth = earthMesh;
     }
 
+    _setupmini_sphere() {
+        var geom = new THREE.SphereGeometry(0.9, 12, 12);
+        var material = new THREE.MeshBasicMaterial({
+            side: THREE.BackSide,
+            color: 0x000000,
+        });
+        var planet = new THREE.Mesh(geom, material);
+        this._scene.add(planet);
+        this.mini = planet;
+    }
+
     _setupStars_sphere() {
         var geom = new THREE.IcosahedronGeometry(1.3, 2);
         var material = new THREE.MeshPhongMaterial({
@@ -159,6 +172,7 @@ class App {
         this._planet = planet;
     }
 
+    
     _setupBackground_particles() {
         var geom = new THREE.SphereGeometry(0.02);
         var material = new THREE.MeshLambertMaterial({
@@ -179,12 +193,9 @@ class App {
                 )
                 .normalize();
             mesh.position.multiplyScalar(0 + Math.random() * 10);
-            mesh.rotation.set(
-                Math.random() * 2,
-                Math.random() * 2,
-                Math.random() * 2
-            );
-            this.particles.add(mesh);
+            if(mesh.position.length() > 1){
+                this.particles.add(mesh);
+            }
         }
         for (var j = 0; j < 100; j++) {
             var mesh2 = new THREE.Mesh(geom, material);
@@ -196,12 +207,10 @@ class App {
                 )
                 .normalize();
             mesh2.position.multiplyScalar(0 + Math.random() * 10);
-            mesh2.rotation.set(
-                Math.random() * 2,
-                Math.random() * 2,
-                Math.random() * 2
-            );
-            this.particles2.add(mesh2);
+            
+            if(mesh2.position.length() > 1){
+                this.particles2.add(mesh2);
+            }
         }
 
         this._scene.add(this.particles);
@@ -219,7 +228,7 @@ class App {
     }
 
     _setupControls() {
-        this.countryindex = null;
+        this.countryindex = 0;
 
         const countryVector = [
             new THREE.Vector3(-0.492366, 0.615457, -0.615457), //KOR
