@@ -1,6 +1,6 @@
 @font-face {
     font-family: "MyFont"; /* 사용할 글꼴 이름 지정 */
-    src: url("font/GenEiKoburiMin6-R.ttf") format("truetype"); /* 글꼴 파일의 경로와 포맷 지정 */
+    src: url("../src/font/handwrite.ttf") format("truetype"); /* 글꼴 파일의 경로와 포맷 지정 */
 }
 body {
     margin: 0;
