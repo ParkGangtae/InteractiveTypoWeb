@@ -1,0 +1,140 @@
+html,
+body {
+    /* height: 100%; */
+}
+body {
+    font-family: "helvetica neue";
+    font-weight: 200;
+    font-size: 20px;
+    background-color: #ffffff;
+}
+@font-face {
+    font-family: "Garibaldi";
+    src: url("./font/Garibaldi-Medium.otf") format("opentype");
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    color: #444;
+    font-size: 1.25rem;
+    margin-right: 5px;
+    outline: none;
+    width: 3rem;
+    min-width: 3rem;
+    height: 3rem;
+    transition: background-color, color;
+    transition-duration: 0.25s;
+    box-shadow: 0 0 2rem #0000;
+}
+button:hover {
+    background: #eee;
+}
+
+i {
+    font-family: "ic-font" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 0 0 3rem;
+}
+.search {
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 수직으로 요소 나열 */
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center; /* 수직 가운데 정렬 */
+    margin: 10px;
+    /* border: 1px solid black; */
+}
+
+.dictate {
+    width: 150px;
+    height: 150px;
+}
+.dictate.on {
+    background: #000;
+    width: 150px;
+    height: 150px;
+}
+.dictate.on svg {
+    display: block;
+    margin: auto;
+}
+.dictate.on .ic-mike {
+    display: none;
+}
+.dictate svg {
+    display: none;
+}
+
+.style-scope {
+    display: none;
+    width: 560px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.style-scope.on {
+    display: block;
+}
+
+.icon-microphone.pulseStart {
+    animation: pulse-red 1.8s infinite;
+}
+
+.header {
+    height: 100%;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.prompt {
+    font-weight: 600;
+}
+.icon-button {
+    width: 30px;
+    display: inline-block;
+}
+.icon-button img {
+    width: 100%;
+}
+.close {
+    cursor: pointer;
+}
+
+#waveform {
+    margin: 10px;
+    margin-top: 200px;
+    /* border: 1px solid black; */
+    width: 800px;
+    height: 400px;
+}
+
+#waveform_fake {
+    display: none;
+    width: 800px;
+    height: 400px;
+}
+
+.text {
+    display: none;
+    /* border: 1px solid black; */
+    /* margin: 10px; */
+}

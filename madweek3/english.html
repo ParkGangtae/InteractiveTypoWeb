@@ -1,24 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Speech Detection</title>
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="search">
+            <canvas id="waveform" width="3200" height="1600"></canvas>
+            <canvas id="waveform_fake" width="3200" height="1600"></canvas>
+            <button class="dictate">
+                <img
+                    class="ic-mike"
+                    src="/src/images/ic-mike.png"
+                    width="70px"
+                    height="70px"
+                />
+                <svg width="2.5rem" height="2.5rem" viewBox="0 0 100 100">
+                    <g stroke="#fff" stroke-width="15">
+                        <path d="M20,20 20,80">
+                            <animate
+                                attributeName="d"
+                                values="M20,40 20,60;M20,20 20,80;M20,40 20,60"
+                                dur="1s"
+                                repeatCount="indefinite"
+                            />
+                        </path>
+                        <path d="M50,10 50,90">
+                            <animate
+                                attributeName="d"
+                                values="M50,10 50,90;M50,40 50,60;M50,10 50,90"
+                                dur="1s"
+                                repeatCount="indefinite"
+                            />
+                        </path>
+                        <path d="M80,20 80,80">
+                            <animate
+                                attributeName="d"
+                                values="M80,40 80,60;M80,20 80,80;M80,40 80,60"
+                                dur="1s"
+                                repeatCount="indefinite"
+                            />
+                        </path>
+                    </g>
+                </svg>
+            </button>
+            <div class="text"></div>
+        </div>
 
-    <link rel="stylesheet" href="css/basic.css">
-    <title>INTERACTIVE WEB ENGLISH</title>
-
-    <style>
-        body {margin: 0; overflow: hidden;}
-        canvas {display: block;}
-    </style>
-
-</head>
-<body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
-
-    <div id="webgl-container-eng"></div>
-    <button id="changeSceneBtn">CLICK</button>
-    <script type="module" src="js/english.js" defer></script>    
-</body>
+        <script type="module" src="/js/english.js"></script>
+    </body>
 </html>
