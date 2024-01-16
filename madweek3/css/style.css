@@ -3,34 +3,37 @@ body {
     /* height: 100%; */
 }
 body {
+    cursor: url('../src/images/eng_cursor.png'),auto;
+
     font-family: "helvetica neue";
     font-weight: 200;
     font-size: 20px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
 }
 @font-face {
     font-family: "Garibaldi";
     src: url("./font/Garibaldi-Medium.otf") format("opentype");
 }
 
-button {
-    cursor: pointer;
+.dictate {
+    cursor: url('../src/images/eng_cursor.png'),auto;
+
     background: transparent;
     border: 0;
     border-radius: 50%;
     color: #444;
-    font-size: 1.25rem;
-    margin-right: 5px;
+    /* font-size: 1.25rem; */
+    /* margin-right: 5px; */
     outline: none;
-    width: 3rem;
+    /* width: 3rem;
     min-width: 3rem;
-    height: 3rem;
+    height: 3rem; */
     transition: background-color, color;
     transition-duration: 0.25s;
     box-shadow: 0 0 2rem #0000;
 }
-button:hover {
-    background: #eee;
+.dictate:hover {
+    background: #ECECEC;
 }
 
 i {
@@ -58,13 +61,13 @@ p {
 }
 
 .dictate {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 .dictate.on {
     background: #000;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 .dictate.on svg {
     display: block;
@@ -116,25 +119,81 @@ p {
     width: 100%;
 }
 .close {
-    cursor: pointer;
 }
 
 #waveform {
     margin: 10px;
-    margin-top: 200px;
+    margin-top: 5%;
     /* border: 1px solid black; */
-    width: 800px;
-    height: 400px;
+    width: 60%;
+    /* height: 30%; */
 }
 
 #waveform_fake {
     display: none;
-    width: 800px;
-    height: 400px;
+    width: 60%;
+    /* height: 400px; */
 }
 
 .text {
     display: none;
     /* border: 1px solid black; */
     /* margin: 10px; */
+}
+
+#changeSceneBtn {
+    cursor: url('../src/images/home_cursor.png'),auto;
+
+    /* background: none; */
+    border: 3px solid #ECECEC;
+    border-radius: 100px;
+    color: #ECECEC;
+    display: block;
+    font-size: 25.6px;
+    font-weight: bold;
+    /* margin: 1em auto; */
+    width: 200px;
+    height: 80px;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 2;
+    transform: translateX(-50%);
+    top: 85%;
+    left: 50%;
+}
+
+.inpage{
+    background: #101010;
+}
+
+#changeSceneBtn::before,
+#changeSceneBtn::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    background: #ECECEC;
+    border-radius:100px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+#changeSceneBtn:hover {
+    color: #101010;
+}
+
+#changeSceneBtn::after {
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 0%;
+}
+
+#changeSceneBtn:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

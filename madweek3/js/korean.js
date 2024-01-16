@@ -1,10 +1,10 @@
 import {drawVowel} from './korean_func.js';
 
 
-setTimeout(() => {
-  const loadingScreen = document.getElementById('loading-screen');
-  loadingScreen.style.display = 'none';
-}, 2000);
+// setTimeout(() => {
+//   const loadingScreen = document.getElementById('loading-screen');
+//   loadingScreen.style.display = 'none';
+// }, 2000);
 
 document.addEventListener("DOMContentLoaded", function () {
   // canvas 요소 가져오기
@@ -32,9 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var cgi_list = [];
   var timer;
 
-  setTimeout(() => {
-    baseCircle();
-  }, 2000);
+  baseCircle();
 
   function baseCircle() {
     let max_radius = main_window.width/42;
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         windowCtx.clearRect(x - max_radius, y - max_radius, max_radius * 2, max_radius * 2);
         windowCtx.beginPath();
         windowCtx.arc(x, y, radius, 0, Math.PI * 2, false);
-        windowCtx.fillStyle = "#E5E5E5";
+        windowCtx.fillStyle = "#FFDBCC";
         windowCtx.fill();
         windowCtx.closePath();
 

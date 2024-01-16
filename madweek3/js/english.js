@@ -18,6 +18,11 @@ var bufferLength = 0;
 const kan = 80;
 var textWidth;
 
+const changeSceneBtn = document.getElementById('changeSceneBtn');
+changeSceneBtn.addEventListener('click', () => {
+    window.location.href = '../index.html';
+});
+
 (() => {
     let SpeechRecognition =
         window.SpeechRecognition || window.webkitSpeechRecognition;
