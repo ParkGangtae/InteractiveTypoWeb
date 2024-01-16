@@ -1,0 +1,161 @@
+* {
+    outline: none;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #101010;
+    overflow: hidden;
+  }
+  
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ECECEC; /* You can customize the background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* You can adjust the font size */
+    z-index: 9999;
+  }
+  
+  #webgl-container {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* transition: opacity 1s ease; */
+  }
+
+  #canvas-kor {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  #main_window {
+    background-color: #ECECEC;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    height: 45%;
+    /* width: 3.3*height; */
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  #cgi_canvas {
+    background-color: transparent;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    height: 45%;
+    /* width: 3.3*height; */
+    z-index: 2;
+    transform: translateX(-50%);
+  }
+
+  #changeSceneBtn {
+    /* background: none; */
+    border: 3px solid #ECECEC;
+    border-radius: 100px;
+    color: #ECECEC;
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    /* margin: 1em auto; */
+    padding: 0.7em 3em;
+    height: 80px;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 2;
+    transform: translateX(-50%);
+    top: 85%;
+    left: 50%;
+  }
+  .main{
+    background: none;
+  }
+  .inpage{
+    background: #101010;
+  }
+
+  #changeSceneBtn::before,
+  #changeSceneBtn::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    background: #ECECEC;
+    border-radius:100px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+
+  #changeSceneBtn:hover {
+    color: #101010;
+  }
+
+  #changeSceneBtn::after {
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 0%;
+  }
+  
+  #changeSceneBtn:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  #cgi {
+    transition: transform 0.3s;
+    background: #ECECEC;
+    border: 1px solid #ECECEC;
+    border-radius: 100px;
+    color: #ECECEC;
+    display: block;
+    font-size: 1.6em;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.4);
+  }
+  .human{
+    transform: translateY(-20%);
+    width: 60px;
+    height: 120px;
+    left: 42%;
+    top: 70%;
+    transform-origin: 50% 100%;
+  }
+  .sky{
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 70%;
+    transform-origin: 150%;
+  }
+  .ground{
+    width: 120px;
+    height: 60px;
+    left: 55%;
+    top: 70%;
+  }
+  #cgi:hover{
+    background-color: #55CBCD;
+    border-color: #55CBCD;
+    transform: scale(1.4);
+  }

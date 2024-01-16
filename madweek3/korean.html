@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/basic.css">
+    <title>INTERACTIVE WEB KOREAN</title>
+
+    <style>
+        body {margin: 0; overflow: hidden;}
+        canvas {display: block;}
+    </style>
+
+</head>
+<body>
+    <div id="loading-screen"> Loading... </div>
+
+    <canvas id="canvas-kor"></canvas>
+    <canvas id="main_window" width="3000" height="1000"></canvas>
+    <canvas id="cgi_canvas" width="3000" height="1000"></canvas>
+
+    <button id="cgi" class="human"> </button>
+    <button id="cgi" class="sky"> </button>
+    <button id="cgi" class="ground"> </button>
+
+
+    <button id="changeSceneBtn" class="inpage">CLICK</button>
+    <script type="module" src="js/korean.js" defer></script>
+  
+</body>
+</html>
