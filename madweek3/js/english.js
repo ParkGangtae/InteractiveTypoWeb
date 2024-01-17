@@ -18,9 +18,9 @@ var bufferLength = 0;
 const kan = 80;
 var textWidth;
 
-const changeSceneBtn = document.getElementById('changeSceneBtn');
-changeSceneBtn.addEventListener('click', () => {
-    window.location.href = '../index.html';
+const changeSceneBtn = document.getElementById("changeSceneBtn");
+changeSceneBtn.addEventListener("click", () => {
+    window.location.href = "../index.html";
 });
 
 (() => {
@@ -37,14 +37,12 @@ changeSceneBtn.addEventListener('click', () => {
 
         recognition.onspeechend = async function () {};
         recognition.onresult = async function (e) {
-            if (store.texts === "") {
-                store.texts = Array.from(e.results)
-                    .map((results) => results[0].transcript)
-                    .join("");
-                console.log(store.texts);
-                $(".text").textContent = store.texts;
-                await unactive();
-            }
+            store.texts = Array.from(e.results)
+                .map((results) => results[0].transcript)
+                .join("");
+            console.log(store.texts);
+            $(".text").textContent = store.texts;
+            await unactive();
         };
         function startRecording(stream) {
             store.mediaRecorder = new MediaRecorder(stream);
