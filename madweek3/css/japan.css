@@ -3,7 +3,7 @@
     src: url("../src/font/GenEiKoburiMin6-R.ttf") format("truetype"); /* 글꼴 파일의 경로와 포맷 지정 */
 }
 body {
-    cursor: url('../src/images/jap_cursor.png'),auto;
+    cursor: url("../src/images/jap_cursor.png"), auto;
     margin: 0;
     font-family: "MyFont", Arial, sans-serif;
     background-color: #f5f5dc;
@@ -23,11 +23,14 @@ body {
 }
 
 .text-container {
+}
+
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 210vh;
+    height: 2000px;
     font-size: 100px;
     color: #000000;
     user-select: none;
@@ -48,7 +51,7 @@ body {
     font-size: 25px;
     top: 0; /* Y 좌표 */
     left: 0; /* X 좌표 */
-    height: 500%;
+    height: 400%;
     width: 100%; /* 너비 조절 */
     /* background: white; */
     color: #999999;
@@ -60,8 +63,8 @@ body {
     position: absolute;
     writing-mode: vertical-rl;
     font-size: 20px;
-    height: 3000px; /* 높이 조절 */
-    width: 100px; /* 너비 조절 */
+    height: 1000px; /* 높이 조절 */
+    width: 10px; /* 너비 조절 */
     user-select: none;
 }
 
@@ -71,15 +74,15 @@ body {
 }
 .vertical-text2 {
     top: 800px;
-    left: 70%;
+    left: 73%;
 }
 .vertical-text3 {
     top: 900px;
-    left: 40%;
+    left: 38%;
 }
 .vertical-text4 {
     top: 1000px;
-    left: 60%;
+    left: 63%;
 }
 .vertical-text5 {
     top: 1100px;
@@ -87,7 +90,7 @@ body {
 }
 .vertical-text6 {
     top: 1200px;
-    left: 55%;
+    left: 58%;
 }
 .vertical-text7 {
     opacity: 0;
@@ -95,10 +98,10 @@ body {
     writing-mode: vertical-rl;
     font-size: 30px;
     height: 1000px; /* 높이 조절 */
-    width: 100px; /* 너비 조절 */
+    width: 10px; /* 너비 조절 */
     user-select: none;
-    top: 1430px;
-    left: 45%;
+    top: 1350px;
+    left: 50%;
 }
 .vertical-text8 {
     opacity: 0;
@@ -106,10 +109,10 @@ body {
     writing-mode: vertical-rl;
     font-size: 30px;
     height: 1000px; /* 높이 조절 */
-    width: 100px; /* 너비 조절 */
+    width: 10px; /* 너비 조절 */
     user-select: none;
-    top: 1430px;
-    left: 47%;
+    top: 1350px;
+    left: 52%;
 }
 
 .click-effect {
