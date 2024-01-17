@@ -29,9 +29,12 @@
 
 **[overview]**
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/285e7c2b-06d7-47b3-b361-2240faa66153" width=50% height=50%>
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%201.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/51e4e9de-6732-46bc-9eff-eed528aa2bd3" width=50% height=50%>
+
+
+
 
 **[구현 방법]**
 
@@ -39,7 +42,6 @@
 - SphereGeometry의 위치는 고정시키고 TextGeometry는 항상 카메라의 반대편에 위치하도록 설정한다.
 - 주요 국가들의 좌표를 찾아 각 국가들의 벡터와 현재 카메라 위치의 벡터의 내적 값들 중 최댓값을 찾아 해당하는 언어로 뒤의 글자를 바꾼다. (화면 중앙에 정확한 위치가 오지 않아도 언어가 반영되기 위함이다.)
 
-![영상1.gif](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/%25EC%2598%2581%25EC%2583%25811.gif)
 
 ### 한글
 
@@ -50,9 +52,9 @@
 
 **[overview]**
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%202.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/58f81974-92cc-4fe6-bdca-ef31579011a3" width=50% height=50%>
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%203.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/094fd40a-5773-41bd-be42-6df68939d9d3" width=50% height=50%>
 
 **[구현 방법]**
 
@@ -60,7 +62,6 @@
 - 한글에는 총 21개의 모음 조합이 존재하는데, 각 모음을 조합할 때 생기는 천지인 조합을 배열로 만들어 조건문으로 작성하였다.
 - 3초동안 버튼 입력이 없으면 새로고침되어 새로운 모음을 그릴 수 있도록 하였다.
 
-![영상2_gif.gif](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/%25EC%2598%2581%25EC%2583%25812_gif.gif)
 
 ### 영어
 
@@ -71,17 +72,15 @@
 
 **[overview]**
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%204.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/60f4c385-dd9c-44d0-92dc-bc6d25e80556" width=50% height=50%>
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%205.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/e696dbdc-9b29-40bd-b038-d31a4b243394" width=50% height=50%>
 
 **[구현 방법]**
 
 - 웹 음성인식 api 및 녹음 api를 동시에 사용하여 녹음 버튼을 클릭하였을 때 언어와, 파형을 인식하여 가져온다.
 - 간격을 설정하여 해당 간격에 해당하는 파형을 canvas상에 그린다.
 - 시간이 지남에 따라 글씨를 canvas에 그린 후 이를 좌표에 따라 옮겨그리는 방식으로 시각화한다.
-
-![2배속](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/%25EC%2598%2581%25EC%2583%25813_gif.gif)
 
 2배속
 
@@ -94,17 +93,14 @@
 
 **[overview]**
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%206.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/c9314785-5c5f-48f0-84f1-e48ce2f9f80c" width=50% height=50%>
 
-![Untitled](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/Untitled%207.png)
+<img src="https://github.com/ParkGangtae/InteractiveTypoWeb/assets/51894747/c5178749-a6c6-4a83-9252-6027e4405eed" width=50% height=50%>
 
 **[구현 방법]**
 
 - GSAP을 이용하여 스크롤함에 따라 글자가 나타나도록 구현하였다
 - 버튼을 클릭시 비활성화된 글자들을 영역에 맞추어 활성화되도록 css를 구상하였다.
 
-![영상4_gif.gif](InteractiveTypoWeb%20706944b6d0f14b6097848afcabc5efcd/%25EC%2598%2581%25EC%2583%25814_gif.gif)
 
 ---
-
-[스크럼](https://www.notion.so/88ed2c3a2eb84ef48fcf7339d8a25703?pvs=21)
