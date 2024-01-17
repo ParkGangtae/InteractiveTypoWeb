@@ -22,8 +22,6 @@ body {
     z-index: 2;
 }
 
-.text-container {
-}
 
 .main1 {
     display: flex;
@@ -100,8 +98,8 @@ body {
     height: 1000px; /* 높이 조절 */
     width: 10px; /* 너비 조절 */
     user-select: none;
-    top: 1350px;
-    left: 50%;
+    top: 1370px;
+    left: 50.5%;
 }
 .vertical-text8 {
     opacity: 0;
@@ -111,8 +109,8 @@ body {
     height: 1000px; /* 높이 조절 */
     width: 10px; /* 너비 조절 */
     user-select: none;
-    top: 1350px;
-    left: 52%;
+    top: 1370px;
+    left: 51.75%;
 }
 
 .click-effect {
@@ -128,4 +126,61 @@ body {
         transform: scale(1);
         opacity: 0;
     }
+}
+
+#changeSceneBtn {
+    cursor: url('../src/images/home_cursor.png'),auto;
+    font-family: "MyFont", Arial, sans-serif;
+    background: none;
+    border: 3px solid #000000;
+    border-radius: 100px;
+    color: #000000;
+    display: block;
+    font-size: 35px;
+    font-weight: bold;
+    /* margin: 1em auto; */
+    width: 60px;
+    height: 180px;
+    position: fixed;
+    text-transform: uppercase;
+    z-index: 2;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 3%;
+}
+
+.inpage{
+    background: #101010;
+}
+
+#changeSceneBtn::before,
+#changeSceneBtn::after {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    background: #000000;
+    border-radius:100px;
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+#changeSceneBtn:hover {
+    color: #FFFFFF;
+}
+
+#changeSceneBtn::after {
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    width: 0%;
+}
+
+#changeSceneBtn:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
 }

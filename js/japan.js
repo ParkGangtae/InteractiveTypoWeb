@@ -4,9 +4,9 @@ gsap.utils.toArray(".anime").forEach((letter, i) => {
     gsap.to(letter, {
         scrollTrigger: {
             trigger: letter,
-            start: "top center+=50",
+            start: "top center-=70",
             toggleActions: "play none none reverse",
-            markers: true,
+            // markers: true,
         },
         opacity: 1,
         duration: 1,
@@ -18,9 +18,9 @@ gsap.utils.toArray(".lines").forEach((letter, i) => {
     gsap.to(letter, {
         scrollTrigger: {
             trigger: letter,
-            start: "top center+=100",
+            start: "top center+=10",
             toggleActions: "play none none reverse",
-            markers: true,
+            // markers: true,
         },
         opacity: 1,
         duration: 1,
@@ -67,4 +67,9 @@ document.addEventListener("click", function (e) {
         hiddenContent.style.maskMode = "alpha"; // 마스크 모드를 설정합니다.
         hiddenContent.style.maskComposite = "source-in"; // 마스크를 합성하는 방식을 'source-in'으로 설정합니다.
     });
+});
+
+const changeSceneBtn = document.getElementById('changeSceneBtn');
+  changeSceneBtn.addEventListener('click', () => {
+    window.location.href = '../index.html';
 });
