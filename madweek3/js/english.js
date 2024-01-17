@@ -33,7 +33,7 @@ changeSceneBtn.addEventListener("click", () => {
         recognition.interimResults = true; // true면 음절을 연속적으로 인식하나 false면 한 음절만 기록함
         recognition.lang = "en-US"; // 값이 없으면 HTML의 <html lang="en">을 참고합니다. ko-KR, en-US, ar
         recognition.continuous = false; //각 인식에 대해 연속 결과가 반환되는지 아니면 단일 결과만 반환되는지를 제어합니다. 기본값은 단일( false.)
-        recognition.maxAlternatives = 1; //20000; // maxAlternatives가 숫자가 작을수록 발음대로 적고, 크면 문장의 적합도에 따라 알맞은 단어로 대체합니다.
+        recognition.maxAlternatives = 20000; //20000; // maxAlternatives가 숫자가 작을수록 발음대로 적고, 크면 문장의 적합도에 따라 알맞은 단어로 대체합니다.
 
         recognition.onspeechend = async function () {};
         recognition.onresult = async function (e) {
